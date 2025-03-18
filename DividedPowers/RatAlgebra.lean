@@ -218,13 +218,14 @@ theorem dpow_of_two_le {n : ℕ} (hn : 2 ≤ n) (a : A) :
   rw [Ideal.pow_eq_zero_of_mem hI2 hn ha, mul_zero]
 
 end OfSquareZero
+
 namespace IsNilpotent
 
 variable {A : Type*} [CommRing A] {p : ℕ} [Fact (Nat.Prime p)] (hp : IsNilpotent (p : A))
   {I : Ideal A} [DecidablePred (fun x ↦ x ∈ I)] (hIp : I ^ p = 0)
 
-/-- If `A` is a commutative ring of prime characteristic `p` and `I` is an ideal such that
-  `I^p = 0`, then `I` admits a divided power structure. -/
+/-- If `A` is a commutative ring in which the prime number `p` is nilpotent and `I` is an ideal
+  such that `I^p = 0`, then `I` admits a divided power structure. -/
 noncomputable def dividedPowers : DividedPowers I :=
   OfInvertibleFactorial.dividedPowers (n := p)
     (IsUnit.natCast_factorial_of_isNilpotent hp (Nat.sub_one_lt (NeZero.ne' p).symm)) hIp
