@@ -1,7 +1,7 @@
 # Divided Powers
 
 This repository contains source code for the article "A Formalization of Divided Powers in Lean", [submitted to ITP 2025]([https://popl24.sigplan.org/home/CPP-2024](https://icetcs.github.io/frocos-itp-tableaux25/itp/)). 
-The code runs over Lean 4 (v4.18.0-rc1) and Mathlib's version [951bd16](https://github.com/leanprover-community/mathlib4/commit/951bd16d55870f47b2e2cd98c794f933e29bd2b5) (March 18, 2025).
+The code runs over Lean 4 (v4.18.0-rc1) and Mathlib's version [951bd16](https://github.com/leanprover-community/mathlib4/tree/951bd16d55870f47b2e2cd98c794f933e29bd2b5) (March 18, 2025).
 
 Given an ideal $I$ in a commutative ring $A$, a divided power structure on $$I$$ is a collection of maps 
 $`\{\gamma_n \colon I \to A\}_{n \in \mathbb{N}}`$,
